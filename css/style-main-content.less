@@ -1,0 +1,846 @@
+/* Déclaration */
+
+    /* Couleurs */
+    @black: #000;
+    @white: #fff;
+    @white_fonce: #E6E6E6;
+    @grey_clair: #D4D4D4;
+    @grey_clair1: #999;
+    @grey_clair3: #F5F5F5;
+    @grey_clair4: #DDDDDD;
+    @grey_clair5: #ebebeb;
+    @grey_clair_sondage: #83888F;
+    @grey_moyen: #888;
+    @grey_moyen2: #525965;
+    @grey_moyen3: #5C626B;
+    @grey_fonce: #20272D;
+    @grey_fonce2: #444A55;
+    @blue_ciel: #00A8DF;
+    @blue_ciel2: #006BD7;
+    @blue_moyen: #004365;
+    @blue_fonce: #002f46;
+    @orange: #FD5700;
+    @jaune: #FFBF00;
+
+
+    /* Taille image */
+    @height_img: 30px;
+
+
+    /* Largeur */
+    @width_page: 1170px;
+
+
+    /* Font */
+    @font_size: 16px;
+    @font_size_bouton_redirection: 1rem;
+    @font_size_item_majeur: 1.5rem;
+    @font_size_item_majeur_a: 1.75rem;
+    @font_size_item_majeur_p: 1.2rem;
+    @font_size_content_item: 1rem;
+    @font_size_content_item_h3: 1.3rem;
+    @font_size_content_item_a: 1.2rem;
+    @font_size_liste_bloc_chiffres: 1.5rem;
+    @font_size_sondage_h3: 2.5rem;
+    @font_size_sondage_p: 1.5rem;
+    @font_size_reponse: 1.25rem;
+
+
+    /* Margin */
+    @margin_bandeau_live: 20px 0;
+    @margin_article_une: 20px;
+    @margin_redirection: 20px 0 30px 0;
+    @margin_redirection_a: 5px;
+    @margin_img: 10px;
+    @margin_bloc_mineur: 0 0 10px 0;
+    @margin_bas_page_row: 0 -15px;
+    @margin_web_tv: 0 0 20px 0;
+    @margin_jeux_populaires_attendus: -7.5px;
+    @margin_liste_jeux_h3: 15px;
+    @margin_liste_jeux_li: 10px;
+    @margin_titre_redir_liste_jeux: 0 10px 0 0;
+    @margin_bloc_autres: 0 15px;
+    @margin_autres_sondages: 40px;
+    @margin_boutique_titre: 10px;
+    @margin_forum_ol: -20px;
+    @margin_forums: 20px 0;
+    
+
+    /* Padding */
+    @padding_texte_bienvenue: 10px;
+    @padding_bandeau_live: 15px 20px;
+    @padding_bouton_p: 6px 8px;
+    @padding_article: 5px 10px;
+    @padding_nav_tabs_a: 5px 15px;
+    @padding_actu_top: 5px 0;
+    @padding_actu: 2px 0;
+    @padding_bouton_redirection: 10px;
+    @padding_bottom_block_categorie: 20px;
+    @padding_titre_bloc: 20px 0;
+    @padding_titre_bloc_h2: 15px;
+    @padding_titre_bloc_a: 10px;
+    @padding_content_item_majeur: 10px;
+    @padding_content_item_majeur_p: 10px 0;
+    @padding_content_item: 10px;
+    @padding_top_content_item_p: 3px;
+    @padding_web_tv: 8px;
+    @padding_bloc_jeux_populaires_et_attendus: 15px 0;
+    @padding_liste_jeux: 15px;
+    @padding_liste_jeux_h3: 5px 0 15px 0;
+    @padding_liste_jeux_li: 6px 40px;
+    @padding_liste_jeux_span: 6px 12px;
+    @padding_titre_redir_liste_jeux: 10px 0; 
+    @padding_titre_redir_liste_jeux_bloc: 10px; 
+    @padding_bloc_sondage: 20px;
+    @padding_table_reponse: 10px;
+    @padding_table_pourcentage: 5px;
+    @padding_autres_resultats: 20px 0;
+    @padding_autres_sondages: 10px;
+    @padding_bloc_autres: 15px 0;
+    @padding_boutique: 10px 0;
+    @padding_boutique_titre: 5px 0;
+    @padding_content_item_boutique: 5px 0;
+    @padding_boutique_a: 30px;
+
+
+    /* Border */
+    @border_article_une: @grey_clair5 2px solid;
+    @border_actu: 1px @grey_clair1 solid;
+    @border_titre_bloc_test: solid 2px @grey_clair4;
+    @border_jeux_attendus: 4px solid @white_fonce;
+    @border_boutique: 1px solid #888;
+
+    
+    /* Border table */
+    @border_spacing_table: 5px 15px;
+
+    
+    /* Border Radius */
+    .border-radius-bloc-majeur (@radius_bm: 0 30px 0 0) {
+        -moz-border-radius: @radius_bm;
+        -webkit-border-radius: @radius_bm;
+        border-radius: @radius_bm;
+    }
+
+
+/* Utilisation */
+
+#main-content{ 
+    background-color: @grey_clair3;
+    max-width: @width_page; 
+    
+    #texte-bienvenue{
+        background-color: @grey_clair5;
+        padding: @padding_texte_bienvenue;
+    
+        p{
+            color: @grey_moyen;
+            font-size: 1.3rem;        
+            
+            a:hover{
+                color: @orange;
+            }
+        }
+    }
+    
+    #bandeau-live{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        background-color: @grey_fonce;
+        margin: @margin_bandeau_live;
+        
+        .title-bandeau-live{
+            background-color: @blue_ciel2;
+            color: @white;
+            padding: @padding_bandeau_live;  
+            margin-left: -15px;
+            white-space: nowrap;
+        }
+        
+        a{
+            padding: @padding_bandeau_live;  
+            color: @white;
+                    
+            &:hover{
+            color: @orange;
+            text-decoration: none;
+            }
+        }
+    }
+    
+    .bouton-test{
+            background-color: @orange;
+            position: absolute;
+            top: -5px;
+            z-index: 2;
+            
+            p{
+                font-size: 1em;
+                color: @white;
+                padding: @padding_bouton_p; 
+            }
+        }
+    
+    #articles-a-la-une{
+        margin-bottom: @margin_article_une;
+        
+        .article-majeur{
+            margin-bottom: @margin_article_une;
+            
+            img{
+                z-index: 1;
+            }
+        
+            .bandeau-image{
+                position: relative;
+                
+                figcaption{
+                    background-color: @grey_moyen;
+                    padding: @padding_article;
+                    font-size: 1em;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;  
+                    z-index: 2;
+                    opacity: 0.8;
+                    
+                    a{
+                        color: @white;
+                        
+                        &:hover{
+                            color: @orange;
+                            text-decoration: none;
+                        }
+                    } 
+                }
+            } 
+            
+            .content-item-une{
+                background-color: #fff;
+                border-bottom: @border_article_une;
+                padding: @padding_article;
+                
+                .type-machine{
+                    float: left;
+                    vertical-align: middle;
+                }
+                
+                .autres-content{
+                    display: flex;
+                    flex-direction: row-reverse;  
+                    
+                    p{
+                        color: @grey_clair1;
+                        font-size: 1em;    
+                        font-weight: bold;
+                        padding-left: 30px;
+                        padding-top: 2px;
+                    }
+                    
+                    .comment-actu-une{
+                        text-align: right;
+                    }
+                }
+            }   
+        }   
+    }
+    
+    #actu-home{
+        border-top: @border_actu;
+        
+        .nav.nav-tabs a{
+            color: @grey_moyen;
+            background-color: @grey_clair4;
+            padding: @padding_nav_tabs_a;
+        }
+        
+        .tab-content{
+                
+            .actu-jour-top, .actu-jour, .actu-veille, .actu-veille-bottom{
+                border-bottom: @border_actu;
+                padding: @padding_actu_top;
+                float: left;
+                width: 100%;
+                
+                li{
+                    font-size: 1.3rem;
+                    list-style: none;
+                }
+            }
+            
+            .actu-jour-top{   
+                font-weight: bold;     
+            }
+            
+            .actu-jour{   
+                padding: @padding_actu;
+                font-weight: bold;     
+            }
+            
+            .actu-veille{
+                padding: @padding_actu;
+            }
+            
+            .actu-veille-bottom{ 
+                padding: @padding_actu;                
+                border: none;
+            }
+            
+            .actu-jour-categorie-titre{
+                padding-left: 0;
+            }
+            
+            .date{
+                color: @black;
+            }
+
+            .categorie a{
+                color: @orange;
+
+                &:hover{
+                    color: @orange;
+                    text-decoration: none;
+                }
+            }
+
+            .titre-actu a{
+                color: @black;
+            
+                &:hover{
+                color: @orange;
+                text-decoration: none;    
+                }
+            }
+
+            .comment-actu{
+                text-align: right;
+                color: @grey_clair1;
+            }
+
+        }
+    }
+    
+    .redirection{
+        display: flex;
+        flex-direction: row;
+        float: right;
+        margin: @margin_redirection;
+
+        li{
+            list-style: none;
+
+            a{
+                color: @orange;
+                font-size: @font_size_bouton_redirection;
+                font-weight: bold;                        
+                background-color: @white_fonce;
+                padding: @padding_bouton_redirection;
+                margin-right: @margin_redirection_a;
+
+                &:hover{
+                    background-color: @orange;
+                    color: @white_fonce;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    .bloc-majeur{
+    background-color: @white;
+    .border-radius-bloc-majeur;
+
+        img{
+            .border-radius-bloc-majeur;
+        }
+
+        .content-item-majeur{
+            padding: @padding_content_item_majeur;  
+            font-size: @font_size_item_majeur;
+
+            a{
+                font-size: @font_size_item_majeur_a;
+                font-weight: bold;
+                color: @black;
+
+                &:hover{
+                    color: @orange;
+                    text-decoration: none;
+                }
+            }
+
+            p{
+                font-size: @font_size_item_majeur_p;
+                color: @grey_clair1;
+                font-weight: bold;
+                padding: @padding_content_item_majeur_p;
+
+            }
+
+            figcaption{
+                font-size: @font_size_item_majeur_p;
+                color: @grey_clair1;
+                padding-bottom: @padding_content_item_majeur;
+            }
+        }
+    }
+
+    .bloc-mineur{
+        background-color: @white;
+        margin: @margin_bloc_mineur;
+
+        img{
+            margin: @margin_img;
+            float: left;
+        }
+
+        .content-item{
+            padding: @padding_content_item;
+            font-size: @font_size_content_item;
+            color: @black;
+
+            h3 strong{
+                font-size: @font_size_content_item_h3;
+                color: @orange;
+            }
+
+            a{
+                font-size: @font_size_content_item_a;
+                font-weight: bold;
+                color: @black;
+
+                &:hover{
+                    color: @orange;
+                    text-decoration: none;
+                }
+            }
+
+            p{
+                font-size: @font_size_content_item;
+                color: @grey_clair1;
+                padding-top: @padding_top_content_item_p;
+                font-weight: bold;
+            }
+        }            
+    }
+    
+    
+    .bloc-categorie{
+        
+        .titre-bloc-test{
+            padding: @padding_titre_bloc;
+            border-top: @border_titre_bloc_test;
+           
+            img{
+                height: @height_img;
+                margin-right: @margin_img;
+            }
+        }
+    }
+    
+    
+    .bloc-categorie-chronique .row{
+        padding-bottom: @padding_bottom_block_categorie;
+        background-color: @grey_clair;
+    }    
+    
+    .bloc-categorie-bandes-annonces .row{
+        background-color: @grey_clair;
+        padding-bottom: @padding_bottom_block_categorie;
+    }
+    
+    .bloc-categorie-analyse .row{
+        background-color: @grey_clair3;
+        padding-bottom: @padding_bottom_block_categorie;
+        
+    }
+    
+    
+    .titre-bloc{
+        padding: @padding_titre_bloc;
+        
+        img{
+            height: @height_img;
+            margin-right: @margin_img;
+        }
+    }
+    
+    .titre-bloc-double{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;     
+    
+        .titre-bloc{
+            padding: @padding_titre_bloc;
+            
+            img{
+                height: @height_img;
+                margin-right: @margin_img;
+            }
+        }
+
+        .redirection-titre{
+            margin: @margin_redirection;
+
+            a{
+                padding: @padding_titre_bloc_a;
+                color: @orange;
+                font-size: @font_size_content_item_a;
+                font-weight: bold;
+                margin-right: @margin_redirection_a;
+
+                &:hover{
+                    color: @orange;
+                    background-color: @white_fonce;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+     
+    #contenu-droite{
+        
+        #web-tv{
+            background-color: @grey_moyen;
+            min-height: 500px;
+            margin: @margin_web_tv;
+        
+            #bloc-titre-web-tv{
+                
+                h2{
+                background-color: @blue_ciel;
+                color: @white;
+                padding: @padding_web_tv;
+                }
+            }
+            
+        #bandeau-pub{
+            background-color: @white;
+            }
+        }
+    }
+    
+    #jeux-populaires-et-attendus{
+        padding: @padding_bloc_jeux_populaires_et_attendus;
+        background-color: @grey_clair3;
+        
+        #jeux-populaires{
+            background-color: @white;
+            margin-right: @margin_jeux_populaires_attendus;
+        } 
+        
+        #jeux-attendus{
+            background-color: @white;
+            margin-left: @margin_jeux_populaires_attendus;
+        }
+        
+        #jeux-populaires, #jeux-attendus{
+            .liste-jeux{
+                padding: @padding_liste_jeux;
+                
+                h3{
+                    padding: @padding_liste_jeux_h3;
+                    margin-bottom: @margin_liste_jeux_h3;
+                    border-bottom: @border_jeux_attendus;
+                }
+                
+                ol{
+                    list-style: none;
+                    margin-left: -40px;
+                    
+                    span{
+                        float: left;
+                        padding: @padding_liste_jeux_span;
+                        background-color: @blue_moyen;
+                        color: @white;
+                        font-size: @font_size_liste_bloc_chiffres;
+                        font-weight: bold;                         
+                        } 
+                    
+                    li{
+                        width: 100%;
+                        font-size: @font_size_liste_bloc_chiffres;
+                        padding: @padding_liste_jeux_li;
+                        margin-bottom: @margin_liste_jeux_li;
+                        font-weight: bold;
+                        background-color: @white_fonce;
+                        color: @blue_moyen; 
+
+                        &:hover{
+                            background-color: @blue_moyen;
+                            color: @white_fonce;     
+                        }
+                    }
+                }    
+                
+                
+                .titre-redir-liste-jeux{
+                    padding: @padding_titre_redir_liste_jeux;
+                    
+                    .titre-redir-liste-jeux-1, .titre-redir-liste-jeux-2{
+                        a{
+                            background-color: @white_fonce;
+                            padding: @padding_titre_redir_liste_jeux_bloc;
+                            margin-right: @margin_titre_redir_liste_jeux;
+                            color: @orange;
+                            font-size: @font_size_bouton_redirection;
+                            font-weight: bold;  
+                            
+                            &:hover{
+                                background-color: @orange;
+                                color: @white_fonce;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    
+                    .titre-redir-liste-jeux-2{
+                        a{
+                            background-color: @orange;
+                            color: @white_fonce;
+                            
+                            &:hover{
+                                background-color: @white_fonce;
+                                color: @orange;
+                            }
+                        }   
+                    }
+                }
+            }    
+        }        
+    }
+    
+    #bas-de-page{
+        background-color: @white;
+        margin: @margin_bas_page_row;
+        float: left;
+        
+        #bloc-sondage{
+            background-color: @grey_moyen2;
+            padding: @padding_bloc_sondage;
+            
+            h3{
+                font-size: @font_size_sondage_h3;
+                color: @grey_clair_sondage;
+                padding-bottom: @padding_bloc_sondage;
+            }
+            
+            p{
+                font-size: @font_size_sondage_p;
+                color: @jaune;
+                font-weight: bold;
+                margin-bottom: @padding_bloc_sondage;  
+            }
+            
+            table{
+                border-collapse: separate;
+                border-spacing: @border_spacing_table; 
+                
+                .avancee-pourcentage{
+                    width: 100px;
+                    background-color: @grey_moyen3; 
+                    
+                    .pourcentage{
+                        font-size: @font_size_content_item;
+                        color: @white;
+                        text-align: right;
+                        background-color: @grey_fonce2;
+                        padding: @padding_table_pourcentage;
+                    }
+                    
+                    .barre-pourcentage-1, .barre-pourcentage-2, .barre-pourcentage-3, .barre-pourcentage-4{
+                        height: 10px;
+                        background-color: @orange;
+                    }
+                    
+                    .barre-pourcentage-1{
+                        width: 13%;
+                    }
+                    
+                    .barre-pourcentage-2{
+                        width: 24%;
+                    }
+                    
+                    .barre-pourcentage-3{
+                        width: 59%;
+                    }
+                    
+                    .barre-pourcentage-4{
+                        width: 5%;
+                    }
+                }
+                
+                .reponse{
+                    color: @white;
+                    font-size: @font_size_reponse;
+                    padding-left: @padding_table_reponse;
+                }
+            }
+                
+            .resultats-votes{
+                padding: @padding_autres_resultats;
+                font-size: @font_size_reponse;
+                color: @orange;
+                font-weight: normal;
+
+                 .votes{
+                    float: left;
+                }
+
+                .reagissez-votes{
+                    float: right;
+
+                    a{
+                        color: @white;
+                        text-decoration: none; 
+
+                        &:hover{
+                            color: @orange;
+                            text-decoration: none;    
+                        }
+                    }
+                }     
+            }
+            
+            .autres-sondages{
+                clear: both;
+                margin-top: @margin_autres_sondages;
+                
+                a{
+                    color: @white;
+                    font-size: @font_size_reponse;
+                    font-weight: bold;
+                    background-color: @grey_fonce2;
+                    padding: @padding_autres_sondages;
+                    
+                    &:hover{
+                        background-color: @white;
+                        color: @orange;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+        #bloc-autres{
+            padding: @padding_bloc_autres;    
+            
+            .titre-bloc-boutique{
+                margin-bottom: @margin_boutique_titre;
+
+                h2{
+                    padding: @padding_boutique_titre; 
+
+                    img{
+                        height: @height_img;
+                        margin-right: @margin_boutique_titre;
+                    }
+                }
+            }
+
+            #top-forums{
+                ol{
+                    margin-left: @margin_forum_ol;
+                    color: @blue_moyen;
+                    font-weight: bold;  
+
+                    li{
+                        a{
+                            color: @blue_moyen;
+
+                            &:hover{
+                                color: @orange;
+                                text-decoration: none;    
+                            }
+                        }
+                    }
+                }
+            }
+
+            #autres-forums{
+                p{
+                    color: @blue_moyen;
+                    font-weight: bold;
+                    font-size: @font_size_sondage_p;
+
+                    a{
+                        color: @blue_moyen;
+                        font-weight: bold;
+
+                        &:hover{
+                            color: @orange;
+                            text-decoration: none; 
+                        }
+                    }
+                }
+                
+            }    
+            
+            .redirection-top{
+                border-top: @border_titre_bloc_test;
+                
+                .redirection-titre-forum{
+                    margin: @margin_forums;
+                    display: flex;
+                    flex-direction: row;
+                    float: right;
+
+                    a{
+                        background-color: @white_fonce;
+                        padding: @padding_content_item;
+                        color: @orange;
+                        font-size: @font_size_content_item;
+                        font-weight: bold; 
+                        margin-right: @margin_redirection_a;
+
+
+                        &:hover{
+                            color: @white_fonce;
+                            background-color: @orange;
+                            text-decoration: none;    
+                        }
+                    }
+                }
+            }
+
+            .boutique-mineur{
+                padding: @padding_boutique;    
+                border-bottom: @border_boutique;
+                
+                img{
+                    float: left;
+                    margin-right: @margin_img;
+                }
+                
+                .content-item{ 
+                    padding: @padding_content_item_boutique;
+                                                
+                    a{    
+                    font-size: @font_size_content_item_a;
+                    color: @grey_moyen;
+
+                        &:hover{
+                            color: @orange;
+                            text-decoration: none;                                                     
+                        }
+                    }
+                     
+                    span a{
+                        color: @orange;
+                        font-size: @font_size_liste_bloc_chiffres;    
+                        padding-left: @padding_boutique_a;
+                        font-weight: bold; 
+                        
+                        &:hover{
+                            text-decoration: none; 
+                        }
+                    }    
+                }    
+            }
+        }        
+    }
+}
+   
+

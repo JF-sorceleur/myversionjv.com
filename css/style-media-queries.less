@@ -1,0 +1,248 @@
+/* Déclaration */
+
+
+    /* Taille image */
+    @height_actu_li_1200: 16px;
+    @height_content_item_h3_1200: 40px;
+
+
+    /* Largeur */
+    @width_page: 1170px;
+
+
+    /* Font */
+    @font_size_footer_1200: 1.4rem;
+
+
+    /* Margin */
+    @margin_liens_footer_1200: 15px 0;
+    @margin_jeux_attendus_990: 10px 5px;
+    @margin_ml_img: 10px;
+
+    
+    /* Padding */
+    @padding_boutique_1200: 20px 20px 30px 20px;
+    @padding_liens_contact_a_1200: 5px 10px;
+    @padding_page_wrapper_990: 74px;
+    @padding_bloc_mineur_content_750: 25px;
+    @padding_autres_forums_750: 25px;
+
+
+
+/* Utilisation */
+
+@media (max-width: 1200px){
+    
+    #main-content{ 
+        #actu-home{
+            .tab-content{
+                .actu-jour-top li, .actu-jour li, .actu-veille li, .actu-veille-bottom li{
+                    max-height: @height_actu_li_1200;
+                    overflow: hidden;
+                }  
+            }
+            .redirection{
+                
+                .redirection-video-une{
+                    display: none;
+                }        
+            }
+        }
+        
+        .bloc-mineur{
+            .content-item{
+                h3{
+                    max-height: @height_content_item_h3_1200;
+                    overflow: hidden;
+                }
+            }            
+        }
+        #bas-de-page{
+            #bloc-sondage{
+                padding: @padding_boutique_1200;
+            }
+        
+            #boutique{
+                display: none;
+            }     
+        }
+    }
+    
+    #main-footer{
+        #liens-contact{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;  
+            
+            span{
+                font-size: @font_size_footer_1200;
+                padding: @padding_liens_contact_a_1200;
+            }
+        }
+    }
+}
+   
+
+@media (max-width: 991px){
+    
+    body{
+
+        #page-wrapper{
+            padding-top: @padding_page_wrapper_990;
+        }
+
+        #main-header{
+            width: 100%;
+
+            #primary-menu{
+                #primary-menu-left{
+                    li{
+                        display: none;
+                    }
+                }
+            }
+
+            #secondary-menu{
+                display: none;
+            }
+        }
+
+        #main-content{ 
+            #bandeau-live{
+
+                .bandeau-live-5 {
+                    display: none;
+                }  
+            }
+
+            #bandeau-pub{
+                display: none;
+            }
+
+            #jeux-attendus, #jeux-populaires{
+                .titre-redir-liste-jeux{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .titre-redir-liste-jeux-1, .titre-redir-liste-jeux-2{
+                        margin: @margin_jeux_attendus_990; 
+                    }
+                }      
+            }
+        }
+
+        #main-footer{
+            #footer-rs #contenu-footer-rs .row > div{
+                text-align: center;
+            }
+            
+            #footer-rs #contenu-footer-rs .row > div .row{
+                display: inline-block;
+            }
+
+            #footer-rs-right span{
+                display: none;
+            }
+            
+            #footer-ml{
+                text-align: center;
+                
+                .footer-ml-logo img{
+                    margin: @margin_ml_img;
+                    display: inline-block;
+                    float: none;
+                }
+                
+                p{
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 750px){
+    
+    body{
+
+        #main-content{ 
+            #bandeau-live{
+
+                .bandeau-live-4{
+                    display: none;
+                }  
+            }
+            
+            #actu-home{
+                .redirection{
+                    .redirection-actu{
+                        display: none;
+                    }        
+                }
+            }
+            
+            .bloc-majeur{
+                margin-bottom: 10px;
+            }
+            
+            .bloc-mineur{
+                .content-item{
+                    padding-bottom: @padding_bloc_mineur_content_750;
+                }
+            }
+            
+            .titre-bloc-double{
+                flex-direction: column;
+            
+                .redirection-titre{
+                    margin-top: 0;
+                }
+            }
+            
+            #bas-de-page{
+                #bloc-autres{
+                    #autres-forums, #top-forums{
+                        padding-bottom: @padding_autres_forums_750;
+                    }
+                }
+            }
+        }
+
+        #main-footer{
+            #footer-infos{  
+
+                .bloc-videos-ml .row{ 
+                    > div{
+                        text-align: center; 
+                    }   
+                    > div .video-ml{
+                        display: inline-block;
+                        max-width: 380px;                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px){
+    
+    body{
+
+        #main-content{ 
+            #bandeau-live{
+
+                .bandeau-live-3{
+                    display: none;
+                }  
+            }
+        }
+    }
+}
